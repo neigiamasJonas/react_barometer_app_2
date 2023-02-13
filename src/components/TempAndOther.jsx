@@ -2,6 +2,7 @@ import React from 'react'
 import { UilTemperatureHalf, UilTear, UilWindsock, UilSun, UilSunset, UilTemperatureQuarter, UilTemperature } from '@iconscout/react-unicons'
 import formatToLocalTime from '../functions/TimeFormat'
 import { iconFromUrl } from '../functions/ImgLinks'
+import Graph from './BarChart'
 
 function TempAndOther({weatherData: {pressure, info, description, icon, temp, feels_like, humidity, speed, sunrise, sunset, timezone, temp_min, temp_max}}) {
   return (
@@ -11,9 +12,9 @@ function TempAndOther({weatherData: {pressure, info, description, icon, temp, fe
             <p className="text-sm font-light pt-2 object-top">{description.charAt(0).toUpperCase() + description.slice(1)}</p>
             
         </div>
-        <div className="flex flex-row justify-between items-center text-white mt-2 py-2">
+        <div className="flex flex-row justify-between items-center text-white -mt-3 py-2">
             <div>
-                <p>{`Pressure now: ${pressure} hPa`}</p>
+                <Graph pressure={pressure}/>
             </div>
             <div className="flex flex-col justify-center items-center">
                 <div className="flex flex-row items-center ">
@@ -40,7 +41,7 @@ function TempAndOther({weatherData: {pressure, info, description, icon, temp, fe
             </div>
         </div>
 
-        <div className="flex flex-row justify-center items-center space-x-1 text-white text-xs pt-3">
+        <div className="flex flex-row justify-center items-center space-x-1 text-white text-xs pt-0 -mt-4">
             <UilSun size="16"/>
             <p className="font-extralight">Rise:</p>
             <span className="font-light ml-1">{formatToLocalTime(sunrise, timezone, 'hh:mm a')}</span>

@@ -4,6 +4,8 @@ import formatToLocalTime from '../functions/TimeFormat'
 import { iconFromUrl } from '../functions/ImgLinks'
 import Graph from './BarChart'
 
+// all this data in a function comes from "App.js"
+
 function TempAndOther({weatherData: {pressure, info, description, icon, temp, feels_like, humidity, speed, sunrise, sunset, timezone, temp_min, temp_max}}) {
   return (
     <div>

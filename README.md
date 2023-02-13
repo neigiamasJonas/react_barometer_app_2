@@ -57,6 +57,9 @@ Plotly - open source graphing library:<br/>        https://plotly.com/javascript
 <br/>
 
 * Get your API key from https://openweathermap.org/ and add it to ApiService.jsx file located in the services folder.
+<br/>
+
+* Other code base relevant info is written as comments in corresponding files.
 
 <br/>
 <br/>

@@ -2,6 +2,7 @@ import React from 'react'
 
 function CityButtons({setQuery}) {
 
+    // 5 cities can be changed
     const cities = [
         {
             id: 1,

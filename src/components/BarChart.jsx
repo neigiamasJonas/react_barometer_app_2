@@ -2,6 +2,7 @@ import React from "react";
 import Plot from "react-plotly.js";
 
 
+// Graph class for pressure gauge chart getting data as prop from "TempAndOther.sjx" component which in turn getting that data from "App.js"
 
 class Graph extends React.Component {
 

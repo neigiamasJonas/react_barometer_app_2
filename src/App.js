@@ -21,14 +21,14 @@ const units = "metric"
 
 
 // use effect
-
 useEffect(() => {
   const fetchData = async () => {
 
+    // Fething notification
     const message = query.q ? query.q : "Current Location"
-
     toast.info("Featching weather data for " + message)
 
+    // getting "json()" from "services/ApiService" GetData constant and setting api data
       await getFormattedData({...query, units}).then((data) => {   
         setWeatherData(data)
         console.log(data);
@@ -38,8 +38,6 @@ useEffect(() => {
   
   fetchData();
 }, [query, units])
-
-
 
 
   return (

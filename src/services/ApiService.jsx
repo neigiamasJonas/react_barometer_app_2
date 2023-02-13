@@ -1,11 +1,13 @@
 import formatToLocalTime from '../functions/TimeFormat'
 import 'react-toastify/dist/ReactToastify.css';
 
-
+// Your API KEY
 const API_KEY = "1b8bb04b1b223e343e9f05089e88251e";
+// Base url
 const BASE_URL = "https://api.openweathermap.org/data";
 
 
+// main fetching
 const getData = async (infoType, searchParams) => {
 
     const url = new URL(BASE_URL + "/" + infoType);
@@ -45,7 +47,7 @@ const formatCurrentData = (data) => {
 const formatForcastData = (data) => {
     let {timezone, daily, current: {dt: currentTime}} = data;
 
-
+// sliced array to reach data in objects
     daily = daily.slice(1, 6).map(d => {
         return {
             time: formatToLocalTime(d.dt, timezone, 'ccc'),

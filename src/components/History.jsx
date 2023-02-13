@@ -5,7 +5,7 @@ import { iconFromUrl } from '../functions/ImgLinks';
 function History({hist}) {
 
 let historyArray = [hist.data1[0], hist.data2[0], hist.data3[0], hist.data4[0], hist.data5[0]];
-historyArray.reverse()
+historyArray.reverse();
 
   return (
     <div>
@@ -17,15 +17,15 @@ historyArray.reverse()
         <div className="flex flex-row justify-between items-center text-white text-xs py-1">
           {historyArray.map(day => (
 
-            <div className="flex flex-col justify-center">
+            <div className="flex flex-col justify-center" key={day.time}>
               <div className="flex flex-row justify-center pt-2">
                 <p className="font-light text-sm">{day.time}</p>
               </div>
-              <div className="flex flex-row justify-center items-center pt-1">
+              <div className="flex flex-row justify-center items-center pt-1" key={day.temp}>
                 <img className="w-10" src={iconFromUrl(day.icon)} alt={day.icon}/>
                 <p className="font-normal text-sm ml-1">{day.temp.toFixed()}°</p>
               </div>
-              <div className="flex flex-row justify-center pt-2">
+              <div className="flex flex-row justify-center pt-2" key={day.pressure}>
                 <p className="font-normal text-sm ml-1">{day.pressure} hPa</p>
               </div>
             </div>

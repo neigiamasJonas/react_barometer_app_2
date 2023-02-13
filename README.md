@@ -52,12 +52,13 @@ Plotly - open source graphing library:<br/>        https://plotly.com/javascript
 
 * Clone this repo to your desktop and run npm install to install all the dependencies.
 <br/>
-<br/>
+
 * After you clone this repo to your desktop, go to its root directory and run `npm install` to install its dependencies. You will then be able to access it at localhost:3000 by typing `npm start` in your terminal.
 <br/>
-<br/>
+
 * Get your API key from https://openweathermap.org/ and add it to ApiService.jsx file located in the services folder.
 
+<br/>
 <br/>
 
 ## Author
